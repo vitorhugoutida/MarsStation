@@ -50,7 +50,7 @@ public class GrabbableObject : MonoBehaviour
 
         holdPoint = null;
 
-        if(currentArea != null && currentArea.IsObjectInside(gameObject))
+        if (currentArea != null && currentArea.IsObjectInside(gameObject))
         {
             //Auxilia a animação de encaixe do objeto no local correto 
             StartCoroutine(SnapToArea(currentArea.transform));
@@ -108,12 +108,12 @@ public class GrabbableObject : MonoBehaviour
         rb.isKinematic = true;
     }
 
-    public void NotifyEnterArea (AreaDetector area)
+    public void NotifyEnterArea(AreaDetector area)
     {
         currentArea = area;
     }
 
-    public void NotifyExitArea (AreaDetector area)
+    public void NotifyExitArea(AreaDetector area)
     {
         if (currentArea == area)
         {
